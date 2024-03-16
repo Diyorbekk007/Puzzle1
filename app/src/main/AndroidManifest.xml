@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Puzzle"
         tools:targetApi="31">
         <activity
-            android:name=".screen.Puzzle3x3Activity"
+            android:name=".screen.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
