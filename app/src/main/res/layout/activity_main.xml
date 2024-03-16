@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#57407C"
+    tools:ignore="MissingClass">
+
+    <TextView
+        android:id="@+id/text_puzzle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-80dp"
+        android:fontFamily="@font/audiowide"
+        android:text="15 Puzzle"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText">
+
+
+    </TextView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/play_button_4x4"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_margin="24dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/days_one"
+        android:text="4X4"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/play_button_3x3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_puzzle">
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/play_button_3x3"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_margin="24dp"
+        android:background="@drawable/button_bg"
+        android:fontFamily="@font/days_one"
+        android:text="3X3"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/play_button_4x4">
+
+
+    </androidx.appcompat.widget.AppCompatButton>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
