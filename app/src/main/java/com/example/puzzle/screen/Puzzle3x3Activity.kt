@@ -4,17 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.puzzle.R
 import com.example.puzzle.databinding.ActivityPuzzle3x3Binding
-import com.example.puzzle.databinding.ActivityPuzzle4x4Binding
 import com.example.puzzle.presenter.PresenterPuzzle3x3
-import com.example.puzzle.presenter.PresenterPuzzle4x4
 import com.example.puzzle.repository.RepositoryPuzzle3x3
-import com.example.puzzle.repository.RepositoryPuzzle4x4
 
 class Puzzle3x3Activity : AppCompatActivity(R.layout.activity_puzzle_3x3) {
     private var _binding: ActivityPuzzle3x3Binding? = null
@@ -66,6 +62,9 @@ class Puzzle3x3Activity : AppCompatActivity(R.layout.activity_puzzle_3x3) {
         binding.newGameButton.setOnClickListener() {
             startActivity(Intent(this, Puzzle3x3Activity::class.java))
             finish()
+        }
+        binding.repeatButton.setOnClickListener(){
+            repositoryPuzzle.ddd()
         }
     }
 
