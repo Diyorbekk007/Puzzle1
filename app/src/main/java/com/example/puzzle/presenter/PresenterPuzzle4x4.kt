@@ -1,5 +1,6 @@
 package com.example.puzzle.presenter
 
+import android.util.Log
 import com.example.puzzle.screen.Puzzle4x4Activity
 import com.example.puzzle.repository.RepositoryPuzzle4x4
 
@@ -28,7 +29,8 @@ class PresenterPuzzle4x4(
             view.setText(numbers[index], hideIndex)
             replace(index)
             if (checkIsSuccess()) {
-                view.stopTimer()
+                val a=view.stopTimer()
+                Log.e("AAAbbbccc",a.toString())
                 view.showAlertDialog()
             } else {
                 view.loadCount(countStep)

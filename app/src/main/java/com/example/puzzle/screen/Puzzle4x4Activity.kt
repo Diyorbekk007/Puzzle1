@@ -1,5 +1,6 @@
 package com.example.puzzle.screen
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -61,6 +62,14 @@ class Puzzle4x4Activity : AppCompatActivity(R.layout.activity_puzzle_4x4) {
         binding.btn14.setOnClickListener { presenter.click(13) }
         binding.btn15.setOnClickListener { presenter.click(14) }
         binding.btn16.setOnClickListener { presenter.click(15) }
+        binding.backButton.setOnClickListener() {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
+        binding.newGameButton.setOnClickListener() {
+            startActivity(Intent(this, Puzzle4x4Activity::class.java))
+            finish()
+        }
     }
 
     fun startTimer() {
@@ -69,8 +78,10 @@ class Puzzle4x4Activity : AppCompatActivity(R.layout.activity_puzzle_4x4) {
         threadTimer.start()
     }
 
-    fun stopTimer() {
+    fun stopTimer():Int {
         timeIsRunning = false
+        binding.newGameButton.visibility = View.VISIBLE
+        return time
     }
 
     fun loadCount(count: Int) {

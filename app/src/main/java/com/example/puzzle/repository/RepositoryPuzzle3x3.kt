@@ -6,10 +6,11 @@ class RepositoryPuzzle3x3 {
         repeat(9) {
             ls.add(it + 1)
         }
-
-        ls[7] = 9
-        ls[8] = 7
-        ls[9] = 8
+        ls.shuffle()
+//
+//        ls[6] = 7
+//        ls[7] = 9
+//        ls[8] = 8
         return ls
     }
 }

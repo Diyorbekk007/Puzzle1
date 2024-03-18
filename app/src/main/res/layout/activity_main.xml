@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/main"
     android:background="#57407C"
-    tools:ignore="MissingClass">
+    tools:context=".screen.MainActivity">
 
     <TextView
         android:id="@+id/text_puzzle"
